@@ -19,7 +19,7 @@ async function getChange(sequence, { baseURL }) {
   try {
     const rsp = await axios.get(`${baseURL}/api/augmented_diff?id=${sequence}`, {
       responseType: "stream",
-      timeout: 60e3
+      timeout: 300e3
     });
 
     rsp.data.sequenceNumber = sequence;
